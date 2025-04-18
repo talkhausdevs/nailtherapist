@@ -1,137 +1,135 @@
 body {
-  background: radial-gradient(circle at top left, #1a001f, #000);
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #2e2e2e;
+  padding: 1.5rem 2rem;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
 }
 
 .logo {
-  color: #ff85d8;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 0 12px #ff4edd, 0 0 18px #c084fc;
+  color: #ff4edd;
+  letter-spacing: 1px;
 }
 
 nav a {
-  margin: 0 15px;
+  margin-left: 1.5rem;
   text-decoration: none;
-  color: #ffffffcc;
-  transition: 0.3s;
-  font-weight: 500;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  display: block;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #ff4edd, #c084fc);
-  transition: width 0.3s;
-  margin-top: 4px;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
-  background-image: url('https://www.transparenttextures.com/patterns/ep-nitrox.png');
-}
-
-.hero-logo {
-  width: 200px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 10px #ff4edd);
-}
-
-.hero h2 {
-  font-size: 2.75rem;
   color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 0 0 8px #ff77e9;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff4edd;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1618175785512-58fe0f4a9cb4?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.2rem;
   color: #ffb0ff;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
-.btn {
-  background: linear-gradient(135deg, #ff4edd, #c084fc);
-  padding: 14px 34px;
+.hero a {
+  background: #ff4edd;
+  padding: 0.75rem 2rem;
   color: #fff;
-  text-decoration: none;
   border-radius: 50px;
+  text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 20px #ff4edd;
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(4px);
+  transition: background 0.3s;
 }
 
-.btn:hover {
-  background: linear-gradient(135deg, #ff99f9, #d9a8ff);
-  box-shadow: 0 0 30px #ff4edd;
+.hero a:hover {
+  background: #e040d3;
 }
 
-.about {
-  padding: 60px 20px;
-  background: rgba(17, 0, 21, 0.9);
+/* Gallery Preview */
+.gallery-preview {
+  padding: 4rem 1rem;
   text-align: center;
 }
 
-.about h3 {
+.gallery-preview h2 {
   font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.gallery-row img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #ff4edd;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-row img:hover {
+  transform: scale(1.1);
+}
+
+/* Social Strip */
+.social-strip {
+  background: linear-gradient(to right, #ff4edd, #c084fc);
   color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 0 0 8px #ff85d8;
-}
-
-.about p {
-  color: #e8c0ff;
-  font-size: 1.1rem;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-footer {
+  padding: 1rem;
+  font-weight: 600;
   text-align: center;
-  padding: 40px 20px;
-  background: #000;
-  color: #aaa;
-  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
-footer .socials a {
-  display: block;
-  margin: 10px 0;
+/* Footer */
+footer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #000;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+footer a {
   color: #ffb0ff;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
 }
 
-footer .socials a:hover {
+footer a:hover {
   color: #fff;
-  text-shadow: 0 0 10px #ff4edd;
+  text-shadow: 0 0 8px #ff4edd;
 }
