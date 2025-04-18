@@ -1,7 +1,7 @@
 body {
-  background-color: #000;
+  background: radial-gradient(circle at top left, #1a001f, #000);
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -12,15 +12,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #0a0a0a;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid #2e2e2e;
 }
 
 .logo {
-  color: #ff4edd;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-shadow: 0 0 10px #ff4edd;
+  color: #ff85d8;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-shadow: 0 0 12px #ff4edd, 0 0 18px #c084fc;
 }
 
 nav a {
@@ -29,17 +30,28 @@ nav a {
   color: #ffffffcc;
   transition: 0.3s;
   font-weight: 500;
+  position: relative;
 }
 
-nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #ff4edd, 0 0 15px #c084fc;
+nav a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4edd, #c084fc);
+  transition: width 0.3s;
+  margin-top: 4px;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
   background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  background-image: url('https://www.transparenttextures.com/patterns/ep-nitrox.png');
 }
 
 .hero-logo {
@@ -50,8 +62,9 @@ nav a:hover {
 
 .hero h2 {
   font-size: 2.75rem;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 10px;
+  text-shadow: 0 0 8px #ff77e9;
 }
 
 .hero p {
@@ -61,27 +74,28 @@ nav a:hover {
 }
 
 .btn {
-  background: #ff4edd;
-  padding: 12px 30px;
+  background: linear-gradient(135deg, #ff4edd, #c084fc);
+  padding: 14px 34px;
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 0 15px #ff4edd;
+  box-shadow: 0 0 20px #ff4edd;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(4px);
 }
 
 .btn:hover {
-  background: #ff77e9;
-  box-shadow: 0 0 25px #ff4edd;
+  background: linear-gradient(135deg, #ff99f9, #d9a8ff);
+  box-shadow: 0 0 30px #ff4edd;
 }
 
 .about {
   padding: 60px 20px;
-  background: #111;
+  background: rgba(17, 0, 21, 0.9);
   text-align: center;
 }
 
@@ -89,20 +103,22 @@ nav a:hover {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 20px;
+  text-shadow: 0 0 8px #ff85d8;
 }
 
 .about p {
-  color: #d0a0ff;
-  font-size: 1rem;
-  max-width: 700px;
+  color: #e8c0ff;
+  font-size: 1.1rem;
+  max-width: 750px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
 footer {
   text-align: center;
   padding: 40px 20px;
   background: #000;
-  color: #999;
+  color: #aaa;
   font-size: 0.95rem;
 }
 
@@ -112,6 +128,7 @@ footer .socials a {
   color: #ffb0ff;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 footer .socials a:hover {
