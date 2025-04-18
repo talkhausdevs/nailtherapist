@@ -1,0 +1,104 @@
+body {
+  background-color: #000;
+  color: #d0a0ff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e080ff;
+  text-shadow: 0 0 5px #fff;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #d0a0ff;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+}
+
+.btn {
+  background: #b100ff;
+  padding: 12px 24px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #b100ff;
+  animation: glitter 1s linear infinite;
+}
+
+@keyframes glitter {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #f0f; }
+  50% { text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff99ff; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #f0f; }
+}
+
+.about {
+  padding: 40px 20px;
+  background: #111;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #000;
+  color: #999;
+}
+
+footer .socials a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d0a0ff;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #f0f;
+}
