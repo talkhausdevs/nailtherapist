@@ -3,133 +3,185 @@ body {
   font-family: 'Outfit', sans-serif;
   background-color: #0a0a0a;
   color: #fff;
+  overflow-x: hidden;
 }
 
-/* Header */
-header {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(#ff4edd 1px, transparent 1px), radial-gradient(#c084fc 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
+  opacity: 0.05;
+  z-index: 0;
+  animation: sparkleMove 40s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sparkleMove {
+  0% {
+    background-position: 0 0, 40px 40px;
+  }
+  100% {
+    background-position: 80px 80px, 120px 120px;
+  }
+}
+
+.nt-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
   background-color: #000;
+  border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #222;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+.nt-logo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
   color: #ff4edd;
   letter-spacing: 1px;
 }
 
-nav a {
+.nt-nav a {
   margin-left: 1.5rem;
   text-decoration: none;
   color: #fff;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
-nav a:hover {
+.nt-nav a:hover {
   color: #ff4edd;
 }
 
-/* Hero Section */
-.hero {
-  height: 90vh;
-  background: url('https://images.unsplash.com/photo-1618175785512-58fe0f4a9cb4?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover;
+.nt-hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a001f 30%, #1e002f 70%, #330043 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 1rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.hero h1 {
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-family: 'Bebas Neue', cursive;
   font-size: 3rem;
-  color: #fff;
   margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 10px #ff4edd;
 }
 
-.hero p {
+.hero-content p {
   font-size: 1.2rem;
   color: #ffb0ff;
   margin-bottom: 2rem;
 }
 
-.hero a {
-  background: #ff4edd;
+.hero-btn {
+  background: linear-gradient(135deg, #ff4edd, #c084fc);
   padding: 0.75rem 2rem;
   color: #fff;
+  font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
+  box-shadow: 0 0 15px #ff4edd;
+  transition: background 0.3s ease;
 }
 
-.hero a:hover {
-  background: #e040d3;
+.hero-btn:hover {
+  background: linear-gradient(135deg, #ff99f9, #d9a8ff);
+  box-shadow: 0 0 25px #ff4edd;
 }
 
-/* Gallery Preview */
-.gallery-preview {
+.nt-gallery {
   padding: 4rem 1rem;
   text-align: center;
+  background-color: #111;
+  position: relative;
+  z-index: 1;
 }
 
-.gallery-preview h2 {
-  font-size: 2rem;
+.nt-gallery h2 {
+  font-size: 2.5rem;
+  color: #fff;
   margin-bottom: 2rem;
+  text-shadow: 0 0 10px #ff4edd;
 }
 
 .gallery-row {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .gallery-row img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #ff4edd;
   object-fit: cover;
-  transition: transform 0.3s;
+  box-shadow: 0 0 12px #c084fc;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-row img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px #ff4edd;
 }
 
-/* Social Strip */
-.social-strip {
+.nt-social-strip {
   background: linear-gradient(to right, #ff4edd, #c084fc);
   color: #fff;
-  padding: 1rem;
   font-weight: 600;
   text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
   white-space: nowrap;
+  overflow-x: auto;
+  z-index: 2;
 }
 
-/* Footer */
-footer {
-  padding: 2rem;
+.nt-footer {
   text-align: center;
+  padding: 2rem;
   background-color: #000;
   color: #999;
-  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
 }
 
-footer a {
+.footer-links a {
   color: #ffb0ff;
   text-decoration: none;
+  margin: 0 0.5rem;
 }
 
-footer a:hover {
+.footer-links a:hover {
   color: #fff;
   text-shadow: 0 0 8px #ff4edd;
+}
+
+.footer-tag {
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #888;
+  font-style: italic;
 }
