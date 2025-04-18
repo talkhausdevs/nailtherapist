@@ -1,27 +1,26 @@
-# Nailtherapist._
+# NAILTHERAPIST._
 
-This is the official landing page for **Nailtherapist._**, a bold and glamorous nail business founded by Kiara Claridy.
+Welcome to the official site for **NAILTHERAPIST._**, the unapologetic urban nail brand by Kiara Claridy.
 
-## 🌟 Features
+## 💅🏾 About the Brand
 
-- Neon-inspired pink, purple, and white theme
-- Custom animated logo styling
-- Responsive modern design with sleek fonts
-- Social media integration
-- Booking call-to-action
+This site serves luxury nails with a hood twist — trap glam meets spa day. Whether you're coming for the freestyle, chrome claws, or that soft girl glow-up, this site is where your booking starts.
 
-## 🚀 Live Preview
+## ✨ What's Included
 
-To preview the site locally:
-1. Download and unzip the files
-2. Open `index.html` in your browser
+- Bold Y2K-meets-2025 urban design
+- Matte black + neon pink & chrome purple aesthetic
+- Full responsive layout (mobile ready)
+- Floating booking buttons
+- Gallery grid for nail sets
+- Custom About section and vibe-y footer
+- Animated hover effects, clean layout, and modern fonts
 
-## 🛠️ Tech Stack
+## 🚀 To Preview the Site
 
-- HTML5
-- CSS3
-- Google Fonts (Poppins)
-- Lottie Animations
+1. Download and unzip the files.
+2. Open `index.html` in your browser.
+3. Upload to GitHub Pages or Netlify for public view.
 
 ## 🔗 Socials
 
@@ -30,4 +29,4 @@ To preview the site locally:
 
 ---
 
-✨ *Where your nails get the therapy they deserve.* 💅🏾
+> “Boutique energy. Hood certified.” — Kiara 💖
