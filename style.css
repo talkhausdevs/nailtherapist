@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Background sparkle animation */
+/* Sparkle background */
 body::before {
   content: "";
   position: fixed;
@@ -29,7 +29,6 @@ body::before {
   100% { background-position: 80px 80px, 120px 120px; }
 }
 
-/* Header */
 .nt-header {
   background-color: #000;
   display: flex;
@@ -62,9 +61,8 @@ body::before {
   text-shadow: 0 0 10px #ff4edd;
 }
 
-/* Hero */
 .nt-hero {
-  height: 100vh;
+  height: 95vh;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a001f 40%, #1e002f 75%, #330043 100%);
   display: flex;
   justify-content: center;
@@ -75,31 +73,37 @@ body::before {
   z-index: 1;
 }
 
+.hero-content {
+  max-width: 700px;
+  z-index: 2;
+}
+
 .hero-content h1 {
   font-family: 'Bebas Neue', cursive;
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   color: #fff;
-  text-shadow: 0 0 15px #ff4edd;
+  text-shadow: 0 0 20px #ff4edd;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   color: #ffb0ff;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hero-btn {
   background: linear-gradient(135deg, #ff4edd, #c084fc);
-  padding: 0.8rem 2.2rem;
+  padding: 0.9rem 2.4rem;
   color: #fff;
-  border: none;
-  font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
+  font-weight: 600;
   font-size: 1rem;
   box-shadow: 0 0 15px #ff4edd;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  animation: bounceGlow 3s ease-in-out infinite;
 }
 
 .hero-btn:hover {
@@ -107,9 +111,13 @@ body::before {
   box-shadow: 0 0 25px #ff4edd;
 }
 
-/* About */
+@keyframes bounceGlow {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 15px #ff4edd; }
+  50% { transform: translateY(-5px); box-shadow: 0 0 30px #ff4edd; }
+}
+
 .nt-about {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
   background-color: #111;
   text-align: center;
   position: relative;
@@ -137,9 +145,8 @@ body::before {
   font-size: 0.95rem;
 }
 
-/* Booking CTA */
 .nt-booking-cta {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background: linear-gradient(to right, #ff4edd, #c084fc);
   text-align: center;
   color: #fff;
@@ -157,7 +164,6 @@ body::before {
   margin-bottom: 2rem;
 }
 
-/* Social Strip */
 .nt-social-strip {
   background: #1a001f;
   text-align: center;
@@ -168,7 +174,6 @@ body::before {
   border-top: 1px solid #2e2e2e;
 }
 
-/* Footer */
 .nt-footer {
   text-align: center;
   padding: 2rem;
