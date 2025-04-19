@@ -11,22 +11,22 @@
   <header class="nt-header">
     <div class="nt-logo">NAILTHERAPIST._</div>
     <nav class="nt-nav">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Book</a>
-      <a href="#">Contact</a>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="nt-hero">
+  <section id="hero" class="nt-hero">
     <div class="hero-content">
       <h1>Your Nails. Your Therapy.</h1>
       <p>Luxury nails, hood energy, healing vibes.</p>
-      <a href="#" class="hero-btn">Book Now</a>
+      <a href="#book" class="hero-btn">Book Now</a>
     </div>
   </section>
 
-  <section class="nt-about">
+  <section id="about" class="nt-about">
     <div class="about-content">
       <div class="about-text">
         <h2>Meet Kiara</h2>
@@ -36,13 +36,30 @@
     </div>
   </section>
 
-  <section class="nt-booking-cta">
+  <section id="book" class="nt-booking-cta">
     <h2>Appointments are open.</h2>
     <p>Don't play yourself. Get in before the books close.</p>
-    <a href="#" class="hero-btn">Secure Your Spot</a>
+
+    <form action="https://script.google.com/macros/s/AKfycbzRKnSpuvJJNA8ZWDDZFIHuXXr6dCR0Yk1bxKlIyOM1oOuYd1dG02nGFMhLqmYDnEvi/exec" method="POST" id="booking-form" target="_blank">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+
+      <select name="Service" required>
+        <option value="">Select a Service</option>
+        <option value="Freestyle Set">Freestyle Set</option>
+        <option value="Acrylic Fill">Acrylic Fill</option>
+        <option value="Gel X">Gel X</option>
+        <option value="Nail Art">Nail Art</option>
+      </select>
+
+      <input type="date" name="Date" required>
+      <input type="time" name="Time" required>
+
+      <button type="submit" class="hero-btn">Book My Slot</button>
+    </form>
   </section>
 
-  <section class="nt-social-strip">
+  <section id="contact" class="nt-social-strip">
     Follow us: @nailtherapist._ 💅🏾 • TikTok: @nailtherapist._ 💜 • Book now: nailtherapist.gloss 💫
   </section>
 
