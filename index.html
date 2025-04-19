@@ -62,6 +62,21 @@
       }, 500);
     }
   </script>
-  </body>
+  
+<script>
+  function redirectAfterSubmit() {
+    setTimeout(() => {
+      window.location.href = "thankyou.html";
+    }, 500);
+  }
+
+  function focusForm() {
+    setTimeout(() => {
+      document.querySelector('#booking-form input[name="Name"]').focus();
+    }, 300);
+  }
+</script>
+</body>
+
   
 </html>
