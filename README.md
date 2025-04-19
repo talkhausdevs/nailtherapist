@@ -1,32 +1,20 @@
+
 # NAILTHERAPIST._
 
-Welcome to the official site for **NAILTHERAPIST._**, the unapologetic urban nail brand by Kiara Claridy.
+This is the official booking website for Nailtherapist._ 💅🏾✨
 
-## 💅🏾 About the Brand
+## Features:
+- Bold, modern homepage layout with boutique branding
+- Fully functional booking form (connects to Google Sheets via Apps Script)
+- Thank-you confirmation page after form submission
+- Animated glow, sparkle background, and stylish font choices
 
-This site serves luxury nails with a hood twist — trap glam meets spa day. Whether you're coming for the freestyle, chrome claws, or that soft girl glow-up, this site is where your booking starts.
+## How to Use:
+1. Update `index.html` with your real Google Script Web App URL
+2. Host the files using GitHub Pages or any static web host
+3. Watch your appointments roll in 💖
 
-## ✨ What's Included
-
-- Bold Y2K-meets-2025 urban design
-- Matte black + neon pink & chrome purple aesthetic
-- Full responsive layout (mobile ready)
-- Floating booking buttons
-- Gallery grid for nail sets
-- Custom About section and vibe-y footer
-- Animated hover effects, clean layout, and modern fonts
-
-## 🚀 To Preview the Site
-
-1. Download and unzip the files.
-2. Open `index.html` in your browser.
-3. Upload to GitHub Pages or Netlify for public view.
-
-## 🔗 Socials
-
-- [Instagram](https://instagram.com/nailtherapist._)
-- [TikTok](https://tiktok.com/@nailtherapist._)
-
----
-
-> “Boutique energy. Hood certified.” — Kiara 💖
+## File List:
+- `index.html` – homepage with booking form
+- `style.css` – main styles for layout and theme
+- `thankyou.html` – custom thank-you page for successful bookings
