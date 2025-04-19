@@ -117,6 +117,7 @@ body::before {
 }
 
 .nt-about {
+  background: linear-gradient(to bottom, #111, #1a001f);
   padding: 6rem 2rem;
   background-color: #111;
   text-align: center;
@@ -131,6 +132,7 @@ body::before {
 }
 
 .nt-about p {
+  margin-bottom: 2rem;
   font-size: 1rem;
   max-width: 650px;
   margin: 1rem auto;
@@ -146,6 +148,7 @@ body::before {
 }
 
 .nt-booking-cta {
+  margin-top: 4rem;
   padding: 5rem 2rem;
   background: linear-gradient(to right, #ff4edd, #c084fc);
   text-align: center;
@@ -155,6 +158,8 @@ body::before {
 }
 
 .nt-booking-cta h2 {
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 0 0 10px #ff4edd;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
