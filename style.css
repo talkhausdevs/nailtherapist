@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
@@ -6,6 +7,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Background sparkle animation */
 body::before {
   content: "";
   position: fixed;
@@ -16,75 +18,69 @@ body::before {
   background-image: radial-gradient(#ff4edd 1px, transparent 1px), radial-gradient(#c084fc 1px, transparent 1px);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
-  opacity: 0.05;
+  opacity: 0.04;
   z-index: 0;
-  animation: sparkleMove 40s linear infinite;
+  animation: sparkleMove 60s linear infinite;
   pointer-events: none;
 }
 
 @keyframes sparkleMove {
-  0% {
-    background-position: 0 0, 40px 40px;
-  }
-  100% {
-    background-position: 80px 80px, 120px 120px;
-  }
+  0% { background-position: 0 0, 40px 40px; }
+  100% { background-position: 80px 80px, 120px 120px; }
 }
 
+/* Header */
 .nt-header {
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  background-color: #000;
-  border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  border-bottom: 1px solid #222;
 }
 
 .nt-logo {
   font-family: 'Bebas Neue', cursive;
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #ff4edd;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nt-nav a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #fff;
+  color: #ffffffcc;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .nt-nav a:hover {
   color: #ff4edd;
+  text-shadow: 0 0 10px #ff4edd;
 }
 
+/* Hero */
 .nt-hero {
   height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a001f 30%, #1e002f 70%, #330043 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a001f 40%, #1e002f 75%, #330043 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
   position: relative;
   z-index: 1;
 }
 
-.hero-content {
-  max-width: 600px;
-  z-index: 2;
-}
-
 .hero-content h1 {
   font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   color: #fff;
-  text-shadow: 0 0 10px #ff4edd;
+  text-shadow: 0 0 15px #ff4edd;
 }
 
 .hero-content p {
@@ -95,13 +91,15 @@ body::before {
 
 .hero-btn {
   background: linear-gradient(135deg, #ff4edd, #c084fc);
-  padding: 0.75rem 2rem;
+  padding: 0.8rem 2.2rem;
   color: #fff;
+  border: none;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 999px;
   text-decoration: none;
+  font-size: 1rem;
   box-shadow: 0 0 15px #ff4edd;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .hero-btn:hover {
@@ -109,56 +107,68 @@ body::before {
   box-shadow: 0 0 25px #ff4edd;
 }
 
-.nt-gallery {
-  padding: 4rem 1rem;
-  text-align: center;
+/* About */
+.nt-about {
+  padding: 4rem 2rem;
   background-color: #111;
+  text-align: center;
   position: relative;
   z-index: 1;
 }
 
-.nt-gallery h2 {
-  font-size: 2.5rem;
+.nt-about h2 {
+  font-size: 2rem;
   color: #fff;
-  margin-bottom: 2rem;
-  text-shadow: 0 0 10px #ff4edd;
+  text-shadow: 0 0 8px #ff4edd;
 }
 
-.gallery-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem 0;
+.nt-about p {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 1rem auto;
+  color: #e8c0ff;
+  line-height: 1.6;
 }
 
-.gallery-row img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #ff4edd;
-  object-fit: cover;
-  box-shadow: 0 0 12px #c084fc;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.gallery-row img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #ff4edd;
-}
-
-.nt-social-strip {
-  background: linear-gradient(to right, #ff4edd, #c084fc);
-  color: #fff;
-  font-weight: 600;
-  text-align: center;
-  padding: 1rem;
+.nt-about blockquote {
+  font-style: italic;
+  margin-top: 2rem;
+  color: #aaa;
   font-size: 0.95rem;
-  white-space: nowrap;
-  overflow-x: auto;
-  z-index: 2;
 }
 
+/* Booking CTA */
+.nt-booking-cta {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #ff4edd, #c084fc);
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.nt-booking-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nt-booking-cta p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Social Strip */
+.nt-social-strip {
+  background: #1a001f;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-top: 1px solid #2e2e2e;
+}
+
+/* Footer */
 .nt-footer {
   text-align: center;
   padding: 2rem;
