@@ -38,11 +38,9 @@
   <section id="book" class="nt-booking-cta">
     <h2>Appointments are open.</h2>
     <p>Don't play yourself. Get in before the books close.</p>
-
-    <form action=https://script.google.com/macros/s/AKfycbzRKnSpuvJJNA8ZWDDZFIHuXXr6dCR0Yk1bxKlIyOM1oOuYd1dG02nGFMhLqmYDnEvi/exec method="POST" id="booking-form" onsubmit="redirectAfterSubmit()">
+    <form action="https://script.google.com/macros/s/AKfycbzRKnSpuvJJNA8ZWDDZFIHuXXr6dCR0Yk1bxKlIyOM1oOuYd1dG02nGFMhLqmYDnEvi/exec" method="POST" id="booking-form" onsubmit="redirectAfterSubmit()">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="email" name="Email" placeholder="Email Address" required>
-
       <select name="Service" required>
         <option value="">Select a Service</option>
         <option value="Freestyle Set">Freestyle Set</option>
@@ -50,10 +48,8 @@
         <option value="Gel X">Gel X</option>
         <option value="Nail Art">Nail Art</option>
       </select>
-
       <input type="date" name="Date" required>
       <input type="time" name="Time" required>
-
       <button type="submit" class="hero-btn">Book My Slot</button>
     </form>
   </section>
@@ -72,17 +68,17 @@
   </footer>
 
   <script>
-    function redirectAfterSubmit() {
-      setTimeout(() => {
+    function redirectAfterSubmit() {{
+      setTimeout(function() {{
         window.location.href = "thankyou.html";
-      }, 500);
-    }
+      }}, 500);
+    }}
 
-    function focusForm() {
-      setTimeout(() => {
+    function focusForm() {{
+      setTimeout(function() {{
         document.querySelector('#booking-form input[name="Name"]').focus();
-      }, 300);
-    }
+      }}, 300);
+    }}
   </script>
 </body>
 </html>
