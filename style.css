@@ -1,1 +1,127 @@
-body { background-color: #0a0a0a; color: #fff; font-family: 'Outfit', sans-serif; } .hero-btn { background: #ff4edd; padding: 1rem 2rem; border: none; color: white; border-radius: 40px; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 1rem; }
+
+body {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nt-header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a0a;
+}
+
+.nt-logo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  color: #ff4edd;
+  text-transform: uppercase;
+}
+
+.nt-nav a {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nt-hero {
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #1a001f, #0a0a0a);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #ff4edd;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #e8c0ff;
+}
+
+.hero-btn {
+  background: #ff4edd;
+  padding: 1rem 2rem;
+  border: none;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #d13ebc;
+  transform: scale(1.05);
+}
+
+.nt-about, .nt-booking-cta {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nt-booking-cta form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nt-booking-cta input,
+.nt-booking-cta select,
+.nt-booking-cta button {
+  flex: 1 1 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.nt-booking-cta button {
+  background: #ff4edd;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nt-booking-cta button:hover {
+  background: #e03cc2;
+}
+
+.nt-social-strip {
+  background: linear-gradient(to right, #ff4edd, #c99cff);
+  color: #0a0a0a;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+
+.nt-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0a0a0a;
+}
+
+.nt-footer a {
+  color: #ff4edd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-tag {
+  margin-top: 0.5rem;
+  color: #999;
+}

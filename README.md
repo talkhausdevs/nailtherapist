@@ -4,13 +4,13 @@
 This is the official booking website for Nailtherapist._ 💅🏾✨
 
 ## Features:
-- Bold, modern homepage layout with boutique branding
-- Fully functional booking form (connects to Google Sheets via Apps Script)
-- Thank-you confirmation page after form submission
-- Animated glow, sparkle background, and stylish font choices
+- Glam homepage with bold branding
+- Booking form that sends data to Google Sheets
+- Confirmation page after submission
+- Private admin dashboard with booking data
 
 ## File List:
-- `index.html` – homepage with booking form
-- `style.css` – main styles for layout and theme
-- `thankyou.html` – custom thank-you page
-- `README.md` – overview and setup info
+- `index.html` – homepage with form
+- `thankyou.html` – confirmation message
+- `dashboard.html` – admin-only dashboard (embedded Google Sheet)
+- `style.css` – styling
