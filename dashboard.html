@@ -7,20 +7,68 @@
   <title>Admin Dashboard – Nailtherapist._</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: 'Outfit', sans-serif;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .pin-container {
+      max-width: 400px;
+      margin: auto;
+    }
+    input[type="password"] {
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+    button {
+      background: #ff4edd;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 40px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    iframe {
+      border-radius: 10px;
+      border: none;
+      width: 100%;
+      height: 600px;
+      margin-top: 2rem;
+      display: none;
+    }
+  </style>
 </head>
-<body style="background: #0a0a0a; color: white;">
-  <header class="nt-header">
-    <div class="nt-logo">NAILTHERAPIST._</div>
-    <nav class="nt-nav">
-      <a href="index.html">Back to Site</a>
-    </nav>
-  </header>
+<body>
+  <h1 style="font-family: 'Bebas Neue', cursive; font-size: 3rem; color: #ff4edd;">Admin Dashboard 🔐</h1>
+  <p style="color: #e8c0ff;">Enter your PIN to view the booking sheet</p>
 
-  <section class="nt-about">
-    <h2 style="text-align:center; font-size: 2.5rem; font-family: 'Bebas Neue'; color: #ff4edd;">Booking Dashboard 💼</h2>
-    <p style="text-align:center; color: #e8c0ff;">Review your latest bookings below. Stay organized, stay booked, stay cute.</p>
+  <div class="pin-container">
+    <input type="password" id="pinInput" placeholder="Enter 4-digit PIN">
+    <button onclick="checkPin()">Unlock</button>
+  </div>
 
-    <iframe src="https://docs.google.com/spreadsheets/d/1zPbMEOPeVvS7xKbdEKxF8Fb0vNfa6T3U5PeMs82Gm6I/edit?usp=sharing?embedded=true" width="100%" height="600" style="border: none; margin-top: 2rem; border-radius: 10px;"></iframe>
-  </section>
+  <iframe id="dashboardFrame" src="https://docs.google.com/spreadsheets/d/1zPbMEOPeVvS7xKbdEKxF8Fb0vNfa6T3U5PeMs82Gm6I/edit?usp=sharing?embedded=true"></iframe>
+
+  <script>
+    function checkPin() {
+      const pin = document.getElementById('pinInput').value;
+      if (pin === "2005") {
+        document.querySelector(".pin-container").style.display = "none";
+        document.getElementById("dashboardFrame").style.display = "block";
+      } else {
+        alert("Incorrect PIN. Try again, boo!");
+      }
+    }
+  </script>
 </body>
 </html>

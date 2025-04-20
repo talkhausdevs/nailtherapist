@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +13,21 @@
     <div class="nt-logo">NAILTHERAPIST._</div>
     <nav class="nt-nav">
       <a href="#hero">Home</a>
-      <a href="#about">About</a>
+      <a href="#kiara">About</a>
       <a href="#contact">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
     </nav>
   </header>
 
   <section id="hero" class="nt-hero">
     <div class="hero-content">
       <h1>Your Nails. Your Therapy.</h1>
-      <p>Luxury nails, hood energy, healing vibes.</p>
+      <p>Luxury nails, <strong>good</strong> energy, healing vibes.</p>
       <a href="#book" class="hero-btn" onclick="focusForm()">Book Now</a>
     </div>
   </section>
 
-  <section id="about" class="nt-about">
+  <section id="kiara" class="nt-about">
     <div class="about-content">
       <div class="about-text">
         <h2>Meet Kiara</h2>
@@ -68,17 +70,17 @@
   </footer>
 
   <script>
-    function redirectAfterSubmit() {{
-      setTimeout(function() {{
+    function redirectAfterSubmit() {
+      setTimeout(function () {
         window.location.href = "thankyou.html";
-      }}, 500);
-    }}
+      }, 500);
+    }
 
-    function focusForm() {{
-      setTimeout(function() {{
+    function focusForm() {
+      setTimeout(function () {
         document.querySelector('#booking-form input[name="Name"]').focus();
-      }}, 300);
-    }}
+      }, 300);
+    }
   </script>
 </body>
 </html>
